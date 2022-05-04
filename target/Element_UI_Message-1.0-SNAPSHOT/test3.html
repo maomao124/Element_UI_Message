@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：Element_UI_Message
+  File name(文件名): test3
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/5/4
+  Time(创建时间)： 21:04
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/element-ui.css">
+    <script src="js/vue.js"></script>
+    <script src="js/element-ui.js"></script>
+</head>
+<body>
+
+<div id="app">
+
+    <el-button @click="open" type="primary">打开消息提示</el-button>
+    <el-button @click="open1" type="success">打开成功消息提示</el-button>
+    <el-button @click="open2" type="info">打开信息消息提示</el-button>
+    <el-button @click="open3" type="warning">打开警告消息提示</el-button>
+    <el-button @click="open4" type="danger">打开错误消息提示</el-button>
+
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {},
+        methods: {
+            open: function ()
+            {
+                this.$message("提示");
+            },
+            open1: function ()
+            {
+                this.$message(
+                    {
+                        message: "成功提示",
+                        type: "success",
+                        showClose: true,
+                    }
+                )
+            },
+            open2: function ()
+            {
+                this.$message({
+                    message: "信息提示",
+                    type: "info",
+                    showClose: true,
+                })
+            },
+            open3: function ()
+            {
+                this.$message({
+                    message: "警告提示",
+                    type: "warning",
+                    showClose: true,
+                })
+            },
+            open4: function ()
+            {
+                this.$message({
+                    message: "错误提示",
+                    type: "error",
+                    showClose: true,
+                })
+            },
+        },
+        mounted()
+        {
+
+        }
+    })
+</script>
+
+</body>
+</html>
